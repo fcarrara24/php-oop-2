@@ -7,9 +7,9 @@ class Movie extends Product
     public $data;
 
     public $genresFilm = [];
-    public function __construct($_data, $_quantity, $_price)
+    public function __construct($_data)
     {
-        parent::__construct($_price, $_quantity);
+        parent::__construct();
         $this->data = $_data;
         $this->setRndGenres();
 
@@ -31,7 +31,7 @@ class Movie extends Product
 
         $genresFilm = $this->genresFilm;
         $data = $this->data;
-        include __DIR__ . "/../Views/card.php";
+        include __DIR__ . "/../Views/movieCard.php";
     }
 
     public static function fetchAll()
@@ -45,7 +45,7 @@ class Movie extends Product
         $_price = rand(5, 200);
 
         foreach ($movieList as $_movie) {
-            $movies[] = new Movie($_movie, $_quantity, $_price);
+            $movies[] = new Movie($_movie);
         }
         // return $movies;
     }

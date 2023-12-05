@@ -6,11 +6,12 @@ abstract class Product
     protected int $sconto = 0;
     protected int $quantity;
 
-    protected function __construct($price, $quantity)
+    protected function __construct()
     {
-        $this->price = $price;
-        $this->quantity = $quantity;
+        $this->price = rand(5, 20);
+        $this->quantity = rand(50, 200);
     }
+
 
 }
 

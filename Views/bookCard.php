@@ -11,12 +11,13 @@
             <div class="d-flex justify-content-between align-items-flex-center flex-nowrap ">
                 <?php echo $data["status"] ?>
                 <div>
-                    <small style="max-width: 50px; height: auto;">
+                    <small class="text-white"
+                        style="max-width: 50px; height: auto; background-color: black; padding: 2px; border-radious: 50%;">
                         <?= $data["categories"][0] ?>
                     </small>
                 </div>
             </div>
-            <div>
+            <div style="font-size: 0.8em; max-width: 70%;">
                 <?php
                 //include __DIR__ . "/../Control/authorWeb.php"
                 foreach ($data["authors"] as $author) {
@@ -25,7 +26,12 @@
 
                 ?>
             </div>
-            <div class="text-nowrap" style="font-size: 0.7em">
+            <div class="py-2">
+                <small>pages:
+                    <?= $data["pageCount"] ?>
+                </small>
+            </div>
+            <div class="text-nowrap " style="font-size: 0.7em">
                 <?php
                 echo 'prezzo: ' . $price . '$ quantita:' . $quantity . 'pz sconto: ' . $sconto . '%';
                 ?>

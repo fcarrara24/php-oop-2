@@ -27,6 +27,12 @@
                 foreach ($genresFilm as $genre) {
                     echo $genre->printGenre();
                 }
+
+                ?>
+            </div>
+            <div class="text-nowrap" style="font-size: 0.7em">
+                <?php
+                echo 'prezzo: ' . $price . '$ quantita:' . $quantity . 'pz sconto: ' . $sconto . '%';
                 ?>
             </div>
         </div>

@@ -12,4 +12,21 @@
     <title>Document</title>
 </head>
 
+<header>
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start container">
+            <button class="btn btn-outline-success me-2" type="button">
+                <a href="index.php">Film</a>
+            </button>
+            <button class="btn btn-outline-secondary me-2" type="button">
+                <a href="games.php">Games</a>
+            </button>
+            <button class="btn btn-outline-danger me-2" type="button">
+                <a href="books.php">Books</a>
+            </button>
+
+        </form>
+    </nav>
+</header>
+
 <body>

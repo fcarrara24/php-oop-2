@@ -1,5 +1,5 @@
 <div class="col-12 col-md-4 col-lg-3 flex-grow-1 pb-4">
-    <div class="card h-100">
+    <div class="card h-100 shadow ">
         <img src="<?= $data["poster_path"] ?>" class="card-img-top my-ratio" alt="<?= $data["title"] ?>">
         <div class="card-body">
             <h5 class="card-title">
@@ -22,7 +22,12 @@
                 </div>
             </div>
             <div>
-                <?php include __DIR__ . "/../Control/Genre.php" ?>
+                <?php
+                //include __DIR__ . "/../Control/GenreWeb.php"
+                foreach ($genresFilm as $genre) {
+                    echo $genre->printGenre();
+                }
+                ?>
             </div>
         </div>
     </div>

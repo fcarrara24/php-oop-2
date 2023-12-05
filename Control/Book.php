@@ -21,7 +21,7 @@ class Book extends Product
         $sconto = $this->sconto;
         $quantity = $this->quantity;
 
-        $genresFilm = $this->genresFilm;
+
         $data = $this->data;
         include __DIR__ . "/../Views/bookCard.php";
     }

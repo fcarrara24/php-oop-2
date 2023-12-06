@@ -18,7 +18,7 @@ class Movie extends Product {
         $this->setRndGenres();
 
         //$common trait to print card
-        $this->traitPrintCard($this->formatCard(), "movieCard");
+        $this->traitPrintCard($this->formatCard());
     }
     public function formatCard() {
         $cardItem = [

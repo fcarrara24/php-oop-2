@@ -6,9 +6,15 @@
                 <?= $data["title"] ?>
             </h5>
             <p class="card-text">
-                <?= substr($data["overview"], 0, 100).'...' ?>
+                <?php
+                if(isset($data["overview"])) {
+                    echo substr($data["overview"], 0, 100).'...';
+                }
+                ?>
             </p>
             <div class="d-flex justify-content-between align-items-flex-center flex-nowrap ">
+
+
                 <?php
                 if(isset($data["printStars"])) {
                     echo $data["printStars"];
@@ -30,6 +36,37 @@
                 }
                 ?>
             </div>
+            <!-- book section -->
+            <?php if(isset($data["authors"])) { ?>
+                <div class="d-flex justify-content-between align-items-flex-center flex-nowrap ">
+                    <?php echo $data["status"] ?>
+                    <div>
+                        <small class="text-white"
+                            style="max-width: 50px; height: auto; background-color: black; padding: 2px; border-radious: 50%;">
+                            <?= $data["categories"][0] ?>
+                        </small>
+                    </div>
+                </div>
+                <div style="font-size: 0.8em; max-width: 70%;">
+                    <?php
+
+                    foreach($data["authors"] as $author) {
+                        echo $author;
+                    }
+
+                    ?>
+                </div>
+                <?php
+            }
+            ?>
+            <!-- book pages -->
+            <small>
+                <?
+                if(isset($data["pageCount"])) {
+                    echo 'pages: '.$data["pageCount"];
+                }
+                ?>
+            </small>
             <div class="text-nowrap" style="font-size: 0.7em">
 
                 <div class="d-flex flex-row justify-content-between w-100">
@@ -40,7 +77,6 @@
                         <?= $quantity.'pz'; ?>
                     </div>
                 </div>
-
                 <?php
                 if(isset($sconto) && $sconto > 0) {
                     echo '<br/>sconto: '.$sconto.'%';

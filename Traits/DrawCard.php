@@ -1,8 +1,8 @@
 <?php
 trait DrawCard {
-    public function traitPrintCard($item, $cardType) {
+    public function traitPrintCard($item) {
         extract($item);
-        include __DIR__."/../Views/$cardType.php";
+        include __DIR__."/../Views/card.php";
 
     }
 }

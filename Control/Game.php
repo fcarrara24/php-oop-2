@@ -24,21 +24,12 @@ class Game extends Product {
         $data = $this->data;
         $this->data["image"] = $this->buildImageUrl();
         $this->traitPrintCard($this->formatCard());
-        //include __DIR__."/../Views/gameCard.php";
+
     }
     private function buildImageUrl() {
         return 'https://cdn.cloudflare.steamstatic.com/steam/apps/'.$this->data["appid"].'/header.jpg';
     }
-    public function formatCard() {
-        $cardItem = [
-            'price' => $this->price,
-            'sconto' => $this->sconto,
-            'quantity' => $this->quantity,
-            //'genresFilm' => $this->genresFilm,
-            'data' => $this->data
-        ];
-        return $cardItem;
-    }
+
 
     public static function fetchAll() {
         $gameString = file_get_contents(__DIR__."/../Model/steam_db.json");

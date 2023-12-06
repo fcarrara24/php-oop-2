@@ -25,16 +25,7 @@ class Book extends Product {
         $this->traitPrintCard($this->formatCard());
         //include __DIR__."/../Views/bookCard.php";
     }
-    public function formatCard() {
-        $cardItem = [
-            'price' => $this->price,
-            'sconto' => $this->sconto,
-            'quantity' => $this->quantity,
-            //'genresFilm' => $this->genresFilm,
-            'data' => $this->data
-        ];
-        return $cardItem;
-    }
+
 
     public static function fetchAll() {
         $movieListString = file_get_contents(__DIR__."/../Model/books_db.json");

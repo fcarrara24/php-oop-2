@@ -77,11 +77,8 @@
                         <?= $quantity.'pz'; ?>
                     </div>
                 </div>
-                <?php
-                if(isset($sconto) && $sconto > 0) {
-                    echo '<br/>sconto: '.$sconto.'%';
-                }
-                ?>
+                <?= $sconto
+                    ?>
             </div>
         </div>
     </div>
